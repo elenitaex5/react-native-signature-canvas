@@ -1,18 +1,18 @@
 import React, {
-  useState,
+  forwardRef,
   useEffect,
+  useImperativeHandle,
   useMemo,
   useRef,
-  forwardRef,
-  useImperativeHandle,
+  useState,
 } from "react";
-import { View, StyleSheet, ActivityIndicator } from "react-native";
+import { ActivityIndicator, StyleSheet, View } from "react-native";
 
 import htmlContent from "./h5/html";
-import injectedSignaturePad from "./h5/js/signature_pad";
 import injectedApplication from "./h5/js/app";
+import injectedSignaturePad from "./h5/js/signature_pad";
 
-import { WebView } from "react-native-webview";
+import { WebView } from "react-native-webview/src";
 
 const styles = StyleSheet.create({
   webBg: {
